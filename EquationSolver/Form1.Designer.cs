@@ -54,6 +54,7 @@
             this.answer = new System.Windows.Forms.TextBox();
             this.flatMini1 = new theme.FlatMini();
             this.flatClose1 = new theme.FlatClose();
+            this.github = new NSButton();
             this.nsTheme1.SuspendLayout();
             this.nsContextMenu1.SuspendLayout();
             this.nsGroupBox3.SuspendLayout();
@@ -67,6 +68,7 @@
             this.nsTheme1.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.nsTheme1.Colors = new Bloom[0];
             this.nsTheme1.ContextMenuStrip = this.nsContextMenu1;
+            this.nsTheme1.Controls.Add(this.github);
             this.nsTheme1.Controls.Add(this.nsGroupBox3);
             this.nsTheme1.Controls.Add(this.nsGroupBox2);
             this.nsTheme1.Controls.Add(this.flatMini1);
@@ -98,7 +100,21 @@
             this.discordToolStripMenuItem});
             this.nsContextMenu1.Name = "nsContextMenu1";
             this.nsContextMenu1.Size = new System.Drawing.Size(68, 70);
-            
+            // 
+            // youTubeToolStripMenuItem
+            // 
+            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
+            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            // 
+            // faceBookToolStripMenuItem
+            // 
+            this.faceBookToolStripMenuItem.Name = "faceBookToolStripMenuItem";
+            this.faceBookToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            // 
+            // discordToolStripMenuItem
+            // 
+            this.discordToolStripMenuItem.Name = "discordToolStripMenuItem";
+            this.discordToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
             // 
             // nsGroupBox3
             // 
@@ -373,6 +389,16 @@
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
+            // github
+            // 
+            this.github.Location = new System.Drawing.Point(408, 5);
+            this.github.Name = "github";
+            this.github.SelectedIndex = 0;
+            this.github.Size = new System.Drawing.Size(68, 18);
+            this.github.TabIndex = 30;
+            this.github.Text = "Github";
+            this.github.Click += new System.EventHandler(this.github_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +446,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private NSButton github;
     }
 }
 

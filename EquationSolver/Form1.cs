@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -132,6 +133,11 @@ namespace EquationSolver
         private void answer_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void github_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/SeenKid/EquationSolver");
         }
     }
 }

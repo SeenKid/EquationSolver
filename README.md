@@ -1,6 +1,7 @@
 # EquationSolver
-EquationSolverR
 
-Résolveur d'équation simple.
+## Résolveur d'équation simple.
 
-Projet réalisé en Mathématiques 
+# Projet réalisé en Mathématiques 
+Prof : ALAALB
+Élève : YANNBERL

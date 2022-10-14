@@ -20,39 +20,46 @@ namespace EquationSolver
 
         public  bool CheckInt()
         {
+            // VARIABLES 
             bool check = true;
             string message = "Veuillez entrer des chiffres dans les champs !";
             string title = "Erreur !";
 
+            // ON CHECK SI LE TEXTE EST UN NOMBRE, SI NON, ON MET UN EFFET ROUGE ET ON OUVRE LA MESSAGEBOX
             if (!int.TryParse(x1.Text, out int value)) {
                 x1.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
+
             if (!int.TryParse(x2.Text, out int value1))
             {
                 x2.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
+
             if (!int.TryParse(y1.Text, out int value2))
             {
                 y1.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
+
             if (!int.TryParse(y2.Text, out int value3))
             {
                 y2.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
+
             if (!int.TryParse(a1.Text, out int value4))
             {
                 a1.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
+
             if (!int.TryParse(a2.Text, out int value5))
             {
                 a2.BackColor = Color.Red;
@@ -66,10 +73,9 @@ namespace EquationSolver
         {
             if (CheckInt())
             {
-                answer.Text = "SUCCESS";
-
+                // Réponse de l'équation (algorithme à créer)
+                answer.Text = "X =" + a1.Text + "  Y=" + a2.Text;
             }
-            
         }
 
         private void nsGroupBox3_Click(object sender, EventArgs e)
@@ -126,17 +132,6 @@ namespace EquationSolver
         private void answer_TextChanged(object sender, EventArgs e)
         {
 
-        }
-        protected void x1_Validate(object source, ServerValidateEventArgs e)
-        {
-            if (true)
-            {
-                e.IsValid = false;
-            }
-            else
-            {
-                e.IsValid = true;
-            }
         }
     }
 }

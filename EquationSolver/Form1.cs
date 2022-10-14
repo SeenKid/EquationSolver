@@ -21,25 +21,43 @@ namespace EquationSolver
         public  bool CheckInt()
         {
             bool check = true;
-           
+            string message = "Veuillez entrer des chiffres dans les champs !";
+            string title = "Erreur !";
+
             if (!int.TryParse(x1.Text, out int value)) {
-                x1. = Color.Red;
+                x1.BackColor = Color.Red;
                 check = false;
+                MessageBox.Show(message, title);
             }
             if (!int.TryParse(x2.Text, out int value1))
             {
                 x2.BackColor = Color.Red;
                 check = false;
+                MessageBox.Show(message, title);
             }
             if (!int.TryParse(y1.Text, out int value2))
             {
                 y1.BackColor = Color.Red;
                 check = false;
+                MessageBox.Show(message, title);
             }
             if (!int.TryParse(y2.Text, out int value3))
             {
                 y2.BackColor = Color.Red;
                 check = false;
+                MessageBox.Show(message, title);
+            }
+            if (!int.TryParse(a1.Text, out int value4))
+            {
+                a1.BackColor = Color.Red;
+                check = false;
+                MessageBox.Show(message, title);
+            }
+            if (!int.TryParse(a2.Text, out int value5))
+            {
+                a2.BackColor = Color.Red;
+                check = false;
+                MessageBox.Show(message, title);
             }
             return check;
         }
@@ -48,8 +66,7 @@ namespace EquationSolver
         {
             if (CheckInt())
             {
-                x1.Text = "";
-             //save the form
+                answer.Text = "SUCCESS";
 
             }
             

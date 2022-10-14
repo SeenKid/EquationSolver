@@ -74,8 +74,24 @@ namespace EquationSolver
         {
             if (CheckInt())
             {
-                // Réponse de l'équation (algorithme à créer)
-                answer.Text = "X =" + a1.Text + "  Y=" + a2.Text;
+                // VARIABLES
+                var a1 = x1.Text;
+                var a2 = x2.Text;
+                var b1 = y1.Text;
+                var b2 = y2.Text;
+                var c1 = a1;
+                var c2 = a1;
+
+                // ALGORITHME
+
+                // X
+            
+
+
+                // Réponse de l'équation (algorithme à créer
+                answer.Text = "X =" + "  Y=" ;
+
+
             }
         }
 

@@ -93,10 +93,32 @@ namespace EquationSolver
                 int ans1 = monCheck.Value5; // Ans1 
                 int ans2 = monCheck.Value6; // Ans2 
 
-                int calculX = (ans1 * y2a - ans2 * y1a) / (x1a * y2a - x2a * y2a);
-                int calculY = (x1a * ans2 - x2a * ans1) / (x1a * y2a - x2a * y2a);
+                var Checker1 = (x1a * y2a - x2a * y1a);
+                var Checker2 = (x1a * y2a - x2a * y1a);
+                if (Checker1 == 0)
+                {
+                    string message = "Le calcul pour la valeur de X est impossible !";
+                    string title = "Erreur !";
+                    MessageBox.Show(message, title);
+                    answer.Text = "Calcul impossible";
 
-                answer.Text = "X =" + calculX + " Y=" + calculY;
+                    return;
+                }
+
+                if (Checker2 == 0)
+                {
+                    string message = "Le calcul pour la valeur de Y est impossible !";
+                    string title = "Erreur !";
+                    MessageBox.Show(message, title);
+                    answer.Text = "Calcul impossible";
+
+                    return;
+                }
+
+                int calculX = (ans1 * y2a - ans2 * y1a) / (x1a * y2a - x2a * y1a);
+                int calculY = (x1a * ans2 - x2a * ans1) / (x1a * y2a - x2a * y1a);
+
+                answer.Text = "X= " + calculX + " Y= " + calculY;
             }
             else
             {

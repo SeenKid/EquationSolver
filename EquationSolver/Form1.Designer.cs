@@ -34,6 +34,7 @@
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faceBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.discordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.github = new NSButton();
             this.nsGroupBox3 = new NSGroupBox();
             this.version = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.answer = new System.Windows.Forms.TextBox();
             this.flatMini1 = new theme.FlatMini();
             this.flatClose1 = new theme.FlatClose();
-            this.github = new NSButton();
             this.nsTheme1.SuspendLayout();
             this.nsContextMenu1.SuspendLayout();
             this.nsGroupBox3.SuspendLayout();
@@ -115,6 +115,16 @@
             // 
             this.discordToolStripMenuItem.Name = "discordToolStripMenuItem";
             this.discordToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            // 
+            // github
+            // 
+            this.github.Location = new System.Drawing.Point(408, 5);
+            this.github.Name = "github";
+            this.github.SelectedIndex = 0;
+            this.github.Size = new System.Drawing.Size(68, 18);
+            this.github.TabIndex = 30;
+            this.github.Text = "Github";
+            this.github.Click += new System.EventHandler(this.github_Click);
             // 
             // nsGroupBox3
             // 
@@ -354,6 +364,7 @@
             // 
             this.answer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.answer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.answer.Font = new System.Drawing.Font("Verdana", 15F);
             this.answer.ForeColor = System.Drawing.Color.White;
             this.answer.Location = new System.Drawing.Point(4, 29);
             this.answer.Multiline = true;
@@ -388,16 +399,6 @@
             this.flatClose1.TabIndex = 0;
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            // 
-            // github
-            // 
-            this.github.Location = new System.Drawing.Point(408, 5);
-            this.github.Name = "github";
-            this.github.SelectedIndex = 0;
-            this.github.Size = new System.Drawing.Size(68, 18);
-            this.github.TabIndex = 30;
-            this.github.Text = "Github";
-            this.github.Click += new System.EventHandler(this.github_Click);
             // 
             // Form1
             // 

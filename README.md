@@ -18,3 +18,6 @@ Cliquez sur **Valider** et laissez la magie opérer
 
 - Le résultat sera imprimé dans la textbox en dessous
 	> Cette textbox permet de garder un historique de vos calculs, pour peu que vous ne fermiez pas l'application
+
+# Téléchargement
+- un lien est disponible ici : [https://github.com/SeenKid/EquationSolver/releases/](EquationSolver - Releases) 

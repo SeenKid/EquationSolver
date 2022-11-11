@@ -1,4 +1,29 @@
-# Equation Solver
+<div align="center">
+  <h1><code>EquationSolver</code></h1>
+  <p>
+    <strong>Informations à propos du projet</strong>
+  </p>
+  <p style="margin-bottom: 0.5ex;">
+    <img
+        src="https://img.shields.io/github/downloads/SeenKid/EquationSolver/total"
+    />
+    <img
+        src="https://img.shields.io/github/last-commit/SeenKid/EquationSolver"
+    />
+    <img
+        src="https://img.shields.io/github/issues/SeenKid/EquationSolver"
+    />
+    <img
+        src="https://img.shields.io/github/issues-closed/SeenKid/EquationSolver"
+    />
+    <img
+        src="https://img.shields.io/github/repo-size/SeenKid/EquationSolver"
+    />
+    <img
+        src="https://img.shields.io/github/workflow/status/SeenKid/EquationSolver/Compile%20and%20release"
+    />
+  </p>
+</div>
 
 EquationSolver est un petit projet réalisé dans le cadre du cours de Mathématiques donné par le professeur **ALAALB**.
 Elève ayant réalisé le projet : **YANNBERL**.

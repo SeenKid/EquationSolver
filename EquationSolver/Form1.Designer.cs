@@ -55,6 +55,7 @@
             this.answer = new System.Windows.Forms.TextBox();
             this.flatMini1 = new theme.FlatMini();
             this.flatClose1 = new theme.FlatClose();
+            this.nsButton1 = new NSButton();
             this.nsTheme1.SuspendLayout();
             this.nsContextMenu1.SuspendLayout();
             this.nsGroupBox3.SuspendLayout();
@@ -349,6 +350,7 @@
             // 
             // nsGroupBox2
             // 
+            this.nsGroupBox2.Controls.Add(this.nsButton1);
             this.nsGroupBox2.Controls.Add(this.answer);
             this.nsGroupBox2.DrawSeperator = false;
             this.nsGroupBox2.Location = new System.Drawing.Point(3, 156);
@@ -400,6 +402,16 @@
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
+            // nsButton1
+            // 
+            this.nsButton1.Location = new System.Drawing.Point(401, 3);
+            this.nsButton1.Name = "nsButton1";
+            this.nsButton1.SelectedIndex = 0;
+            this.nsButton1.Size = new System.Drawing.Size(117, 23);
+            this.nsButton1.TabIndex = 30;
+            this.nsButton1.Text = "Effacer l\'historique";
+            this.nsButton1.Click += new System.EventHandler(this.nsButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +460,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private NSButton github;
+        private NSButton nsButton1;
     }
 }
 

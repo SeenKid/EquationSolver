@@ -106,7 +106,7 @@ namespace EquationSolver
                     string message = "Le calcul pour la valeur de X est impossible !";
                     string title = "Erreur !";
                     MessageBox.Show(message, title);
-                    answer.Text = "Calcul impossible";
+                    answer.Text += "Calcul impossible";
 
                     return;
                 }
@@ -124,7 +124,12 @@ namespace EquationSolver
                 int calculX = (ans1 * y2a - ans2 * y1a) / (x1a * y2a - x2a * y1a);
                 int calculY = (x1a * ans2 - x2a * ans1) / (x1a * y2a - x2a * y1a);
 
-                answer.Text = "X= " + calculX + " Y= " + calculY;
+                if(string.IsNullOrEmpty(answer.Text)) {
+                    answer.Text += "X= " + calculX + ";" + " Y= " + calculY;
+                } else 
+                {
+                    answer.Text += "\r\nX= " + calculX + ";" + " Y= " + calculY;
+                }
             }
             else
             {
@@ -193,6 +198,11 @@ namespace EquationSolver
         private void github_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/SeenKid/EquationSolver");
+        }
+
+        private void nsButton1_Click(object sender, EventArgs e)
+        {
+            answer.Clear();
         }
     }
 }

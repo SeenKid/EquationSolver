@@ -20,4 +20,4 @@ Cliquez sur **Valider** et laissez la magie opérer
 	> Cette textbox permet de garder un historique de vos calculs, pour peu que vous ne fermiez pas l'application
 
 # Téléchargement
-[EquationSolver - Releases](https://github.com/SeenKid/EquationSolver/releases/)
+- un lien de téléchargement est disponible ici : [EquationSolver - Releases](https://github.com/SeenKid/EquationSolver/releases/)

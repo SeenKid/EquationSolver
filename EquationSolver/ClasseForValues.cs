@@ -10,6 +10,5 @@
         public int Value5 { get; set; }
         public int Value6 { get; set; }
         public string ErrorMessage { get; set; } = string.Empty;
-        public string ErrorMessagex1 { get; internal set; }
     }
 }

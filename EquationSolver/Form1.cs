@@ -25,52 +25,52 @@ namespace EquationSolver
         {
             // VARIABLES 
             bool check = true;
-            string message = "Veuillez entrer des chiffres dans les champs:";
+            string message = "\n Veuillez entrer des chiffres dans les champs:";
             string title = "Erreur !";
             var result = new ClasseForValues();
+            int i = 0;
 
             // ON CHECK SI LE TEXTE EST UN NOMBRE, SI NON, ON MET UN EFFET ROUGE ET ON OUVRE LA MESSAGEBOX
             if (!int.TryParse(x1.Text, out int value1))
             {
                 x1.BackColor = Color.Red;
-                //result.Check = false;
+                i = 1;
                 result.ErrorMessage += $"{message} {nameof(x1)}";
-                MessageBox.Show(message, title);
             }
 
             if (!int.TryParse(x2.Text, out int value2))
             {
                 result.ErrorMessage += $"{message} {nameof(x2)}";
+                i = 1;
                 x2.BackColor = Color.Red;
-                MessageBox.Show(ErrorMessage, title);
             }
 
             if (!int.TryParse(y1.Text, out int value3))
             {
                 result.ErrorMessage += $"{message} {nameof(y1)}";
+                i = 1;
                 y1.BackColor = Color.Red;
-                MessageBox.Show(ErrorMessage, title);
             }
 
             if (!int.TryParse(y2.Text, out int value4))
             {
                 result.ErrorMessage += $"{message} {nameof(y2)}";
+                i = 1;
                 y2.BackColor = Color.Red;
-                MessageBox.Show(ErrorMessage, title);
             }
 
             if (!int.TryParse(a1.Text, out int value5))
             {
                 result.ErrorMessage += $"{message} {nameof(a1)}";
+                i = 1;
                 a1.BackColor = Color.Red;
-                MessageBox.Show(ErrorMessage, title);
             }
 
             if (!int.TryParse(a2.Text, out int value6))
             {
                 result.ErrorMessage += $"{message} {nameof(a2)}";
+                i = 1;
                 a2.BackColor = Color.Red;
-                MessageBox.Show(ErrorMessage, title);
             }
             result.Value1 = value1;
             result.Value2 = value2;
@@ -78,6 +78,12 @@ namespace EquationSolver
             result.Value4 = value4;
             result.Value5 = value5;
             result.Value6 = value6;
+
+            if (i == 1)
+            {
+                MessageBox.Show(result.ErrorMessage, title);
+            }
+
             return result;
         }
 
@@ -122,7 +128,7 @@ namespace EquationSolver
             }
             else
             {
-                var message = "Une erreur dans l'application à été détectée.";
+                var message = "Une erreur imprévue à été détectée. Veuillez redémarrer l'application.";
                 var title = "Erreur !";
                 MessageBox.Show(message, title);
             }

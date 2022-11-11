@@ -19,80 +19,81 @@ namespace EquationSolver
             InitializeComponent();
         }
 
-        public  bool CheckInt()
+        public ClasseForValues CheckInt()
         {
             // VARIABLES 
             bool check = true;
             string message = "Veuillez entrer des chiffres dans les champs !";
             string title = "Erreur !";
+            var result = new ClasseForValues();
 
             // ON CHECK SI LE TEXTE EST UN NOMBRE, SI NON, ON MET UN EFFET ROUGE ET ON OUVRE LA MESSAGEBOX
-            if (!int.TryParse(x1.Text, out int value)) {
+            if (!int.TryParse(x1.Text, out int value1))
+            {
+                result.Value1 = value1;
                 x1.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
 
-            if (!int.TryParse(x2.Text, out int value1))
+            else if (!int.TryParse(x2.Text, out int value2))
             {
+                result.Value2 = value2;
                 x2.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
 
-            if (!int.TryParse(y1.Text, out int value2))
+            else if(!int.TryParse(y1.Text, out int value3))
             {
+                result.Value3 = value3;
                 y1.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
 
-            if (!int.TryParse(y2.Text, out int value3))
+            else if(!int.TryParse(y2.Text, out int value4))
             {
+                result.Value4 = value4;
                 y2.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
 
-            if (!int.TryParse(a1.Text, out int value4))
+            else if (!int.TryParse(a1.Text, out int value5))
             {
+                result.Value5 = value5;
                 a1.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
 
-            if (!int.TryParse(a2.Text, out int value5))
+            else if (!int.TryParse(a2.Text, out int value6))
             {
+                result.Value6 = value6;
                 a2.BackColor = Color.Red;
                 check = false;
                 MessageBox.Show(message, title);
             }
-            return check;
+            return result;
         }
 
         private void Valider_Click(object sender, EventArgs e)
         {
-            if (CheckInt())
-            {
-                // VARIABLES
-                var a1 = x1.Text;
-                var a2 = x2.Text;
-                var b1 = y1.Text;
-                var b2 = y2.Text;
-                var c1 = a1;
-                var c2 = a1;
+            var monCheck = CheckInt();
 
-                // ALGORITHME
+                int xcalc1 = monCheck.Value1;
+                int xcalc2 = monCheck.Value2;
+                int ycalc1 = monCheck.Value3;
+                int ycalc2 = monCheck.Value4;
+                int ans1 = monCheck.Value5;
+                int ans2 = monCheck.Value6;
 
-                // X
+                int calculX = (ans1 * ycalc2 - ans2 * ycalc1) / (xcalc1 * ycalc2 - xcalc2 * ycalc1);
+                int calculY = (xcalc1 * xcalc2 - xcalc2 * ans1) / (xcalc1 * ycalc2 - xcalc2 * ycalc1);
+
+                answer.Text = "X =" + calculX + "\n  Y=" + calculY ;
             
-
-
-                // Réponse de l'équation (algorithme à créer
-                answer.Text = "X =" + "  Y=" ;
-
-
-            }
         }
 
         private void nsGroupBox3_Click(object sender, EventArgs e)

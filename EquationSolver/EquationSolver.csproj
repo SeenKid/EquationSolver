@@ -61,6 +61,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClasseForValues.cs" />
     <Compile Include="NSTheme.cs">
       <SubType>Component</SubType>
     </Compile>

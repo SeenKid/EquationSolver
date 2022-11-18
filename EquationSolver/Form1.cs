@@ -30,6 +30,14 @@ namespace EquationSolver
             var result = new ClasseForValues();
             int i = 0;
 
+            // Reset les couleurs lorsqu'on clique sur le bouton calculer
+            x1.BackColor = Color.Empty;
+            x2.BackColor = Color.Empty;
+            y1.BackColor = Color.Empty;
+            y2.BackColor = Color.Empty;
+            a1.BackColor = Color.Empty;
+            a2.BackColor = Color.Empty;
+
             // ON CHECK SI LE TEXTE EST UN NOMBRE, SI NON, ON MET UN EFFET ROUGE ET ON OUVRE LA MESSAGEBOX
             if (!int.TryParse(x1.Text, out int value1))
             {
@@ -89,30 +97,51 @@ namespace EquationSolver
 
         private void Valider_Click(object sender, EventArgs e)
         {
-            var monCheck = CheckInt();
-            if (monCheck.Check)
+            var IntChecker = CheckInt();
+            if (IntChecker.Check)
             {
-                int x1a = monCheck.Value1; // X1 
-                int x2a = monCheck.Value2; // X2 
-                int y1a = monCheck.Value3; // Y1 
-                int y2a = monCheck.Value4; // Y2 
-                int ans1 = monCheck.Value5; // Ans1 
-                int ans2 = monCheck.Value6; // Ans2 
+                int x1a = IntChecker.Value1; // X1 
+                int x2a = IntChecker.Value2; // X2 
+                int y1a = IntChecker.Value3; // Y1 
+                int y2a = IntChecker.Value4; // Y2 
+                int ans1 = IntChecker.Value5; // Ans1 
+                int ans2 = IntChecker.Value6; // Ans2 
 
+                //Calcul de X
                 var Checker1 = (x1a * y2a - x2a * y1a);
+                //Calcul de Y
                 var Checker2 = (x1a * y2a - x2a * y1a);
+
+                // On Check si le calcul est réalisable, si il ne l'est pas, on affiche une boite d'erreur
                 if (Checker1 == 0)
                 {
                     string message = "Le calcul pour la valeur de X est impossible !";
                     string title = "Erreur !";
                     MessageBox.Show(message, title);
-                    answer.Text += "Calcul impossible";
+
+                    if (string.IsNullOrEmpty(answer.Text))
+                    {
+                        answer.Text = "Calcul impossible";
+                    }
+                    else
+                    {
+                        answer.Text = "\r\nCalcul impossible";
+                    }
 
                     return;
                 }
 
+                // On Check si le calcul est réalisable, si il ne l'est pas, on affiche une boite d'erreur
                 if (Checker2 == 0)
                 {
+                    if (string.IsNullOrEmpty(answer.Text))
+                    {
+                        answer.Text = "Calcul impossible";
+                    } else
+                    {
+                        answer.Text = "\r\nCalcul impossible";
+                    }
+
                     string message = "Le calcul pour la valeur de Y est impossible !";
                     string title = "Erreur !";
                     MessageBox.Show(message, title);
@@ -121,21 +150,17 @@ namespace EquationSolver
                     return;
                 }
 
+                // Partie calcul, si tout est réalisable
                 int calculX = (ans1 * y2a - ans2 * y1a) / (x1a * y2a - x2a * y1a);
                 int calculY = (x1a * ans2 - x2a * ans1) / (x1a * y2a - x2a * y1a);
 
+                // On affiche le texte dans la textbox
                 if(string.IsNullOrEmpty(answer.Text)) {
-                    answer.Text += "X= " + calculX + ";" + " Y= " + calculY;
+                    answer.Text += "X= " + String.Format("{0:#,0.000}", calculX) + ";" + " Y= " + String.Format("{0:#,0.000}", calculY);
                 } else 
                 {
-                    answer.Text += "\r\nX= " + calculX + ";" + " Y= " + calculY;
+                    answer.Text += "\r\nX= " + String.Format("{0:#,0.000}", calculX) + ";" + " Y= " + String.Format("{0:#,0.000}", calculY);
                 }
-            }
-            else
-            {
-                var message = "Une erreur imprévue à été détectée. Veuillez redémarrer l'application.";
-                var title = "Erreur !";
-                MessageBox.Show(message, title);
             }
         }
 
@@ -203,6 +228,22 @@ namespace EquationSolver
         private void nsButton1_Click(object sender, EventArgs e)
         {
             answer.Clear();
+        }
+
+        private void infobutton_Click(object sender, EventArgs e)
+        {
+            AboutBox1 form = new AboutBox1();
+            form.Show();
+        }
+
+        private void flatClose1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nsButton2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://seenkid.github.io/EquationSolver/documentation.md");
         }
     }
 }

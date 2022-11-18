@@ -1,0 +1,12 @@
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\EquationSolver.csproj.AssemblyReference.cache
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\Tool_API_DDOS_By_ExoTiQueMoDz.Properties.Resources.resources
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\EquationSolver.csproj.GenerateResource.cache
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\EquationSolver.csproj.CoreCompileInputs.cache
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\Tool API DDOS By ExoTiQueMoDz.exe
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\Tool API DDOS By ExoTiQueMoDz.pdb
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\bin\Debug\Tool API DDOS By ExoTiQueMoDz.exe.config
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\bin\Debug\Tool API DDOS By ExoTiQueMoDz.exe
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\bin\Debug\Tool API DDOS By ExoTiQueMoDz.pdb
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\EquationSolver.csproj.CopyComplete
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\EquationSolver.Form1.resources
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Debug\EquationSolver.AboutBox1.resources

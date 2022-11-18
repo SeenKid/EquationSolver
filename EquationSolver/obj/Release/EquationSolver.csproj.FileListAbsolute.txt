@@ -1,0 +1,5 @@
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Release\EquationSolver.Form1.resources
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Release\Tool_API_DDOS_By_ExoTiQueMoDz.Properties.Resources.resources
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Release\EquationSolver.csproj.GenerateResource.cache
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Release\EquationSolver.csproj.CoreCompileInputs.cache
+C:\Users\Yann\Desktop\EquationSolver\EquationSolver\obj\Release\EquationSolver.csproj.AssemblyReference.cache

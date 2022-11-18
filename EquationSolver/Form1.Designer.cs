@@ -34,8 +34,9 @@
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faceBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.discordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.github = new NSButton();
             this.nsGroupBox3 = new NSGroupBox();
+            this.infobutton = new NSButton();
+            this.github = new NSButton();
             this.version = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -46,16 +47,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.y2 = new NSTextBox();
             this.y1 = new NSTextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.a2 = new NSTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Valider = new NSButton();
             this.a1 = new NSTextBox();
             this.nsGroupBox2 = new NSGroupBox();
+            this.nsButton1 = new NSButton();
             this.answer = new System.Windows.Forms.TextBox();
             this.flatMini1 = new theme.FlatMini();
             this.flatClose1 = new theme.FlatClose();
-            this.nsButton1 = new NSButton();
+            this.documentation = new NSButton();
             this.nsTheme1.SuspendLayout();
             this.nsContextMenu1.SuspendLayout();
             this.nsGroupBox3.SuspendLayout();
@@ -69,7 +70,6 @@
             this.nsTheme1.BorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.nsTheme1.Colors = new Bloom[0];
             this.nsTheme1.ContextMenuStrip = this.nsContextMenu1;
-            this.nsTheme1.Controls.Add(this.github);
             this.nsTheme1.Controls.Add(this.nsGroupBox3);
             this.nsTheme1.Controls.Add(this.nsGroupBox2);
             this.nsTheme1.Controls.Add(this.flatMini1);
@@ -82,7 +82,7 @@
             this.nsTheme1.Movable = true;
             this.nsTheme1.Name = "nsTheme1";
             this.nsTheme1.NoRounding = false;
-            this.nsTheme1.Sizable = true;
+            this.nsTheme1.Sizable = false;
             this.nsTheme1.Size = new System.Drawing.Size(530, 414);
             this.nsTheme1.SmartBounds = true;
             this.nsTheme1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
@@ -117,18 +117,11 @@
             this.discordToolStripMenuItem.Name = "discordToolStripMenuItem";
             this.discordToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
             // 
-            // github
-            // 
-            this.github.Location = new System.Drawing.Point(408, 5);
-            this.github.Name = "github";
-            this.github.SelectedIndex = 0;
-            this.github.Size = new System.Drawing.Size(68, 18);
-            this.github.TabIndex = 30;
-            this.github.Text = "Github";
-            this.github.Click += new System.EventHandler(this.github_Click);
-            // 
             // nsGroupBox3
             // 
+            this.nsGroupBox3.Controls.Add(this.documentation);
+            this.nsGroupBox3.Controls.Add(this.infobutton);
+            this.nsGroupBox3.Controls.Add(this.github);
             this.nsGroupBox3.Controls.Add(this.version);
             this.nsGroupBox3.Controls.Add(this.label12);
             this.nsGroupBox3.Controls.Add(this.label11);
@@ -139,7 +132,6 @@
             this.nsGroupBox3.Controls.Add(this.label6);
             this.nsGroupBox3.Controls.Add(this.y2);
             this.nsGroupBox3.Controls.Add(this.y1);
-            this.nsGroupBox3.Controls.Add(this.label5);
             this.nsGroupBox3.Controls.Add(this.a2);
             this.nsGroupBox3.Controls.Add(this.label7);
             this.nsGroupBox3.Controls.Add(this.Valider);
@@ -147,29 +139,49 @@
             this.nsGroupBox3.DrawSeperator = false;
             this.nsGroupBox3.Location = new System.Drawing.Point(3, 33);
             this.nsGroupBox3.Name = "nsGroupBox3";
-            this.nsGroupBox3.Size = new System.Drawing.Size(524, 106);
+            this.nsGroupBox3.Size = new System.Drawing.Size(524, 117);
             this.nsGroupBox3.SubTitle = "";
             this.nsGroupBox3.TabIndex = 25;
             this.nsGroupBox3.Text = "nsGroupBox3";
             this.nsGroupBox3.Title = "Équation";
             this.nsGroupBox3.Click += new System.EventHandler(this.nsGroupBox3_Click);
             // 
+            // infobutton
+            // 
+            this.infobutton.Location = new System.Drawing.Point(419, 73);
+            this.infobutton.Name = "infobutton";
+            this.infobutton.SelectedIndex = 0;
+            this.infobutton.Size = new System.Drawing.Size(94, 19);
+            this.infobutton.TabIndex = 31;
+            this.infobutton.Text = "Infos";
+            this.infobutton.Click += new System.EventHandler(this.infobutton_Click);
+            // 
+            // github
+            // 
+            this.github.Location = new System.Drawing.Point(445, 20);
+            this.github.Name = "github";
+            this.github.SelectedIndex = 0;
+            this.github.Size = new System.Drawing.Size(68, 18);
+            this.github.TabIndex = 30;
+            this.github.Text = "Github";
+            this.github.Click += new System.EventHandler(this.github_Click);
+            // 
             // version
             // 
             this.version.AutoSize = true;
             this.version.BackColor = System.Drawing.Color.Transparent;
             this.version.ForeColor = System.Drawing.Color.Lime;
-            this.version.Location = new System.Drawing.Point(446, 7);
+            this.version.Location = new System.Drawing.Point(442, 3);
             this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(71, 13);
+            this.version.Size = new System.Drawing.Size(78, 13);
             this.version.TabIndex = 21;
-            this.version.Text = "Version 0.1";
+            this.version.Text = "Version 0.3a";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(200, 75);
+            this.label12.Location = new System.Drawing.Point(177, 75);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(14, 13);
             this.label12.TabIndex = 29;
@@ -181,9 +193,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(78, 76);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.Size = new System.Drawing.Size(32, 13);
             this.label11.TabIndex = 28;
-            this.label11.Text = "X     +";
+            this.label11.Text = "X  +";
             // 
             // label10
             // 
@@ -191,9 +203,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(78, 45);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 27;
-            this.label10.Text = "X     +";
+            this.label10.Text = "X  +";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // x2
@@ -208,7 +220,7 @@
             this.x2.NumbersOnly = false;
             this.x2.ReadOnly = false;
             this.x2.Size = new System.Drawing.Size(54, 23);
-            this.x2.TabIndex = 26;
+            this.x2.TabIndex = 4;
             this.x2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.x2.UseSystemPasswordChar = false;
             this.x2.TextChanged += new System.EventHandler(this.x2_TextChanged);
@@ -225,7 +237,7 @@
             this.x1.NumbersOnly = false;
             this.x1.ReadOnly = false;
             this.x1.Size = new System.Drawing.Size(54, 23);
-            this.x1.TabIndex = 25;
+            this.x1.TabIndex = 1;
             this.x1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.x1.UseSystemPasswordChar = false;
             this.x1.TextChanged += new System.EventHandler(this.x1_TextChanged);
@@ -234,7 +246,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(229, 46);
+            this.label9.Location = new System.Drawing.Point(193, 46);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(16, 13);
             this.label9.TabIndex = 24;
@@ -244,7 +256,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(229, 75);
+            this.label6.Location = new System.Drawing.Point(193, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 13);
             this.label6.TabIndex = 23;
@@ -254,15 +266,15 @@
             // 
             this.y2.AutoScroll = false;
             this.y2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.y2.Location = new System.Drawing.Point(125, 71);
+            this.y2.Location = new System.Drawing.Point(117, 71);
             this.y2.MaxLength = 32767;
             this.y2.Multiline = false;
             this.y2.Name = "y2";
             this.y2.NumberBounds = new System.Drawing.Point(0, 0);
             this.y2.NumbersOnly = false;
             this.y2.ReadOnly = false;
-            this.y2.Size = new System.Drawing.Size(68, 23);
-            this.y2.TabIndex = 22;
+            this.y2.Size = new System.Drawing.Size(54, 23);
+            this.y2.TabIndex = 5;
             this.y2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.y2.UseSystemPasswordChar = false;
             this.y2.TextChanged += new System.EventHandler(this.y2_TextChanged);
@@ -271,42 +283,32 @@
             // 
             this.y1.AutoScroll = false;
             this.y1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.y1.Location = new System.Drawing.Point(125, 42);
+            this.y1.Location = new System.Drawing.Point(117, 42);
             this.y1.MaxLength = 32767;
             this.y1.Multiline = false;
             this.y1.Name = "y1";
             this.y1.NumberBounds = new System.Drawing.Point(0, 0);
             this.y1.NumbersOnly = false;
             this.y1.ReadOnly = false;
-            this.y1.Size = new System.Drawing.Size(68, 23);
-            this.y1.TabIndex = 21;
+            this.y1.Size = new System.Drawing.Size(54, 23);
+            this.y1.TabIndex = 2;
             this.y1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.y1.UseSystemPasswordChar = false;
             this.y1.TextChanged += new System.EventHandler(this.y1_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(8, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Équation :";
             // 
             // a2
             // 
             this.a2.AutoScroll = false;
             this.a2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.a2.Location = new System.Drawing.Point(251, 71);
+            this.a2.Location = new System.Drawing.Point(218, 71);
             this.a2.MaxLength = 32767;
             this.a2.Multiline = false;
             this.a2.Name = "a2";
             this.a2.NumberBounds = new System.Drawing.Point(0, 0);
             this.a2.NumbersOnly = false;
             this.a2.ReadOnly = false;
-            this.a2.Size = new System.Drawing.Size(87, 23);
-            this.a2.TabIndex = 14;
+            this.a2.Size = new System.Drawing.Size(54, 23);
+            this.a2.TabIndex = 6;
             this.a2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.a2.UseSystemPasswordChar = false;
             this.a2.TextChanged += new System.EventHandler(this.a2_TextChanged);
@@ -315,7 +317,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(200, 46);
+            this.label7.Location = new System.Drawing.Point(177, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(14, 13);
             this.label7.TabIndex = 15;
@@ -323,27 +325,27 @@
             // 
             // Valider
             // 
-            this.Valider.Location = new System.Drawing.Point(344, 56);
+            this.Valider.Location = new System.Drawing.Point(278, 53);
             this.Valider.Name = "Valider";
             this.Valider.SelectedIndex = 0;
-            this.Valider.Size = new System.Drawing.Size(85, 23);
-            this.Valider.TabIndex = 19;
-            this.Valider.Text = "Valider";
+            this.Valider.Size = new System.Drawing.Size(87, 33);
+            this.Valider.TabIndex = 7;
+            this.Valider.Text = "Calculer";
             this.Valider.Click += new System.EventHandler(this.Valider_Click);
             // 
             // a1
             // 
             this.a1.AutoScroll = false;
             this.a1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.a1.Location = new System.Drawing.Point(251, 42);
+            this.a1.Location = new System.Drawing.Point(218, 42);
             this.a1.MaxLength = 32767;
             this.a1.Multiline = false;
             this.a1.Name = "a1";
             this.a1.NumberBounds = new System.Drawing.Point(0, 0);
             this.a1.NumbersOnly = false;
             this.a1.ReadOnly = false;
-            this.a1.Size = new System.Drawing.Size(87, 23);
-            this.a1.TabIndex = 16;
+            this.a1.Size = new System.Drawing.Size(54, 23);
+            this.a1.TabIndex = 3;
             this.a1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.a1.UseSystemPasswordChar = false;
             this.a1.TextChanged += new System.EventHandler(this.a1_TextChanged);
@@ -362,6 +364,16 @@
             this.nsGroupBox2.Title = "Historique des réponses";
             this.nsGroupBox2.Click += new System.EventHandler(this.nsGroupBox2_Click);
             // 
+            // nsButton1
+            // 
+            this.nsButton1.Location = new System.Drawing.Point(401, 3);
+            this.nsButton1.Name = "nsButton1";
+            this.nsButton1.SelectedIndex = 0;
+            this.nsButton1.Size = new System.Drawing.Size(117, 23);
+            this.nsButton1.TabIndex = 30;
+            this.nsButton1.Text = "Effacer l\'historique";
+            this.nsButton1.Click += new System.EventHandler(this.nsButton1_Click);
+            // 
             // answer
             // 
             this.answer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -372,7 +384,7 @@
             this.answer.Multiline = true;
             this.answer.Name = "answer";
             this.answer.ReadOnly = true;
-            this.answer.Size = new System.Drawing.Size(514, 208);
+            this.answer.Size = new System.Drawing.Size(514, 217);
             this.answer.TabIndex = 0;
             this.answer.TextChanged += new System.EventHandler(this.answer_TextChanged);
             // 
@@ -401,16 +413,17 @@
             this.flatClose1.TabIndex = 0;
             this.flatClose1.Text = "flatClose1";
             this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.flatClose1.Click += new System.EventHandler(this.flatClose1_Click);
             // 
-            // nsButton1
+            // documentation
             // 
-            this.nsButton1.Location = new System.Drawing.Point(401, 3);
-            this.nsButton1.Name = "nsButton1";
-            this.nsButton1.SelectedIndex = 0;
-            this.nsButton1.Size = new System.Drawing.Size(117, 23);
-            this.nsButton1.TabIndex = 30;
-            this.nsButton1.Text = "Effacer l\'historique";
-            this.nsButton1.Click += new System.EventHandler(this.nsButton1_Click);
+            this.documentation.Location = new System.Drawing.Point(419, 93);
+            this.documentation.Name = "documentation";
+            this.documentation.SelectedIndex = 0;
+            this.documentation.Size = new System.Drawing.Size(94, 21);
+            this.documentation.TabIndex = 32;
+            this.documentation.Text = "Documentation";
+            this.documentation.Click += new System.EventHandler(this.nsButton2_Click);
             // 
             // Form1
             // 
@@ -438,7 +451,6 @@
         private theme.FlatMini flatMini1;
         private theme.FlatClose flatClose1;
         private NSTextBox a2;
-        private System.Windows.Forms.Label label5;
         private NSTextBox a1;
         private System.Windows.Forms.Label label7;
         private NSButton Valider;
@@ -461,6 +473,8 @@
         private System.Windows.Forms.Label label12;
         private NSButton github;
         private NSButton nsButton1;
+        private NSButton infobutton;
+        private NSButton documentation;
     }
 }
 

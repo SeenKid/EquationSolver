@@ -243,7 +243,7 @@ namespace EquationSolver
 
         private void nsButton2_Click(object sender, EventArgs e)
         {
-            Process.Start("https://seenkid.github.io/EquationSolver/documentation.md");
+            Process.Start("https://github.com/SeenKid/EquationSolver/blob/master/documentation.md");
         }
     }
 }

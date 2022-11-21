@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -113,7 +113,7 @@ namespace EquationSolver
                 var Checker2 = (x1a * y2a - x2a * y1a);
 
                 // On Check si le calcul est réalisable, si il ne l'est pas, on affiche une boite d'erreur
-                if (Checker1 == 0)
+                if (Checker1 <= 0)
                 {
                     string message = "Le calcul pour la valeur de X est impossible !";
                     string title = "Erreur !";
@@ -132,7 +132,7 @@ namespace EquationSolver
                 }
 
                 // On Check si le calcul est réalisable, si il ne l'est pas, on affiche une boite d'erreur
-                if (Checker2 == 0)
+                if (Checker2 <= 0)
                 {
                     if (string.IsNullOrEmpty(answer.Text))
                     {
@@ -240,7 +240,6 @@ namespace EquationSolver
         {
 
         }
-
         private void nsButton2_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/SeenKid/EquationSolver/blob/master/documentation.md");

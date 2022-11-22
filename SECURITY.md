@@ -2,15 +2,15 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Version of the applications that are working as of today :
 
-| Version | Supported          |
+| Version | Working properly          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+|  0.4  | :white_check_mark: |
+|  0.3a  | :white_check_mark: |
+| 0.3   | :x:                |
+| 0.2   | :x:                |
+| 0.1   | :x:                |
 
 ## Reporting a Vulnerability
 

@@ -121,11 +121,11 @@ namespace EquationSolver
 
                     if (string.IsNullOrEmpty(answer.Text))
                     {
-                        answer.Text = "Calcul impossible";
+                        answer.Text += "Calcul impossible";
                     }
                     else
                     {
-                        answer.Text = "\r\nCalcul impossible";
+                        answer.Text += "\r\nCalcul impossible";
                     }
 
                     return;
@@ -136,10 +136,10 @@ namespace EquationSolver
                 {
                     if (string.IsNullOrEmpty(answer.Text))
                     {
-                        answer.Text = "Calcul impossible";
+                        answer.Text += "Calcul impossible";
                     } else
                     {
-                        answer.Text = "\r\nCalcul impossible";
+                        answer.Text += "\r\nCalcul impossible";
                     }
 
                     string message = "Le calcul pour la valeur de Y est impossible !";
